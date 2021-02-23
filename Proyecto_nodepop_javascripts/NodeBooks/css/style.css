@@ -1,11 +1,15 @@
-
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css";
 
 /* loader */
 .lds-ellipsis {
-  display: inline-block;
-  position: relative;
-  width: 80px;
-  height: 80px;
+  display: block;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255); /* Fallback color */
+  background-color: rgba(255, 255, 255, 0.8); /* Black w/ opacity */
+
 }
 
 .lds-ellipsis.hidden {
@@ -13,8 +17,10 @@
 }
 
 .lds-ellipsis div {
+  display: block;
   position: absolute;
-  top: 33px;
+  top: 50%;
+  margin-left: 50%;
   width: 13px;
   height: 13px;
   border-radius: 50%;
