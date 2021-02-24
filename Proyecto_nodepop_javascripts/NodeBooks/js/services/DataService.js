@@ -23,11 +23,12 @@ export default {
         };
         const url = `${BASE_URL}/auth/register`;
         const response = await fetch(url, config);
-        const data = response.json();
+        const data = await response.json();
         if (response.ok) {
             return data;
         } else {
-            throw new Error(data);
+            // TODO: mejorar gestión de errores
+            throw new Error(data.message || JSON.stringify(data));
         }
     }
 };
