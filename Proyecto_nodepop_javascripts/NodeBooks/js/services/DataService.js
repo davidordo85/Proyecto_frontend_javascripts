@@ -11,5 +11,23 @@ export default {
         } else {
             throw new Error(`HTTP Error: ${response.status}`)
         }
+    },
+
+    registerUser: async (user) => {
+        const config = {
+            method: 'POST',
+            headers: { 
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        };
+        const url = `${BASE_URL}/auth/register`;
+        const response = await fetch(url, config);
+        const data = response.json();
+        if (response.ok) {
+            return data;
+        } else {
+            throw new Error(data);
+        }
     }
 };

@@ -2,7 +2,6 @@ import BaseController from './BaseController.js';
 
 export default class LoaderController extends BaseController {
 
-
     constructor(element) {
         super(element);
         this.subscribe(this.events.START_LOADING, () => {
@@ -14,10 +13,11 @@ export default class LoaderController extends BaseController {
     }
 
     showLoading() {
-        this.element.classList.remove("hidden");
+        this.element.classList.remove('hidden');
     }
 
     hideLoading() {
-        this.element.classList.add("hidden");
+        this.element.classList.add('hidden');
     }
+
 }

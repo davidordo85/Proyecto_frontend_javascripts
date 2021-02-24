@@ -1,4 +1,5 @@
 import BaseController from './BaseController.js';
+import dataService from '../services/DataService.js';
 
 
 export default class RegisterFormController extends BaseController {
@@ -10,9 +11,21 @@ export default class RegisterFormController extends BaseController {
 
     attachEventListener() {
         
-        this.element.addEventListener('submit', (event) => {
+        this.element.addEventListener('submit', async (event) => {
             event.preventDefault();  // evita que se enví el formulario (comportamiento por defecto)
-            console.log('SE ENVIA EL FORMULARIO', this.element.validity);
+            const user = {
+                username: this.element.elements.email.value,
+                password: this.element.elements.password.value
+            };
+            this.publish(this.events.START_LOADING);
+            try {
+                const data = await dataService.registerUser(user);
+                console.log('USUARIO!!!!', data)
+            } catch (error) {
+                this.publish(this.events.ERROR, error);
+            } finally {
+                this.publish(this.events.FINISH_LOADING);
+            }
         });
 
         this.element.querySelectorAll('input').forEach(input => {
