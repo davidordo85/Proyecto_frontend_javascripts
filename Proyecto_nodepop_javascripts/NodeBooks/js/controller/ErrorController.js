@@ -1,13 +1,12 @@
 import BaseController from './BaseController.js';
 import { errorView } from '../views.js';
-import pubSub from '../services/Pubsub.js';
 
 
 export default class ErrorController extends BaseController {
 
     constructor(element) {
         super(element);
-        pubSub.subscribe('error', (error) => {
+        this.subscribe(this.events.ERROR, (error) => {
             this.showError(error);
         })
     }

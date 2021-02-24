@@ -1,7 +1,6 @@
 import BaseController from './BaseController.js';
 import dataService from '../services/DataService.js';
 import { adsView } from '../views.js';
-import pubSub from '../services/Pubsub.js';
 
 export default class AdsListController extends BaseController {
 
@@ -14,15 +13,18 @@ export default class AdsListController extends BaseController {
     }
 
     async loadAds() {
-        pubSub.publish('startLoading', {});
+        this.publish(this.events.START_LOADING, {});
         try {
             const advertisements = await dataService.getAdvertisements();
             this.render(advertisements);
         } catch (error) {
-            pubSub.publish('error', error);
+            console.error(error);
+            this.publish(this.events.ERROR, error);
         } finally {
-            pubSub.publish('finishLoading', {});
+            // esto se ejecuta siempre, vaya bien o vaya mal
+            this.publish(this.events.FINISH_LOADING, {});
         }
     }
+
 
 }
