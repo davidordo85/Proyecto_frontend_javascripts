@@ -8,10 +8,8 @@ window.addEventListener("DOMContentLoaded", async (event) => {
 
     const element = document.querySelector('.advertisement-list');
     const controller = new AdsListController(element);
-    controller.loader = loaderController;
     controller.loadAds();
 
     const errorsElement = document.querySelector('.global-errors');
     const errorController = new ErrorController(errorsElement);
-    errorController.showError('iyo que dise!');
 });
