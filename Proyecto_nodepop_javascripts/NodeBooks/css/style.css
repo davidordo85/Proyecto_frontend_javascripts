@@ -68,4 +68,19 @@
   }
 }
 
+/* cards */
+
+.container {
+  width: 30%;
+  height: 50%;
+}
+
+.card {
+  margin: 40px auto;
+  text-align: center;
+   
+}
+
+
+
   
