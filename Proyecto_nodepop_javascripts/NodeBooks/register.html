@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NodeBooks-Register</title>
+    <title>NodeBook-Register</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -22,33 +22,35 @@
     <div class="container-registerOrLogin">
         <div class="columns">
             <div class="column is-two-thirds">
-                <h1 class="title">Registro</h1>
-                <div class="field">
-                    <p class="control has-icons-left has-icons-right">
-                        <input class="input" type="email" placeholder="Email">
-                        <span class="icon is-small is-left">
-                            <i class="fas fa-envelope"></i>
-                        </span>
-                        <span class="icon is-small is-right">
-                            <i class="fas fa-check"></i>
-                        </span>
-                    </p>
-                </div>
-                <div class="field">
-                    <p class="control has-icons-left">
-                        <input class="input" type="password" placeholder="Password">
-                        <span class="icon is-small is-left">
-                            <i class="fas fa-lock"></i>
-                        </span>
-                    </p>
-                </div>
-                <div class="field">
-                    <p class="control">
-                        <button class="button is-success">
-                            Registrar
-                        </button>
-                    </p>
-                </div>
+                <h1 class="title">Register</h1>
+                <form novalidate>
+                    <div class="field">
+                        <p class="control has-icons-left has-icons-right">
+                            <input name="email" class="input" type="email" placeholder="Email" required>
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-envelope"></i>
+                            </span>
+                            <span class="icon is-small is-right">
+                                <i class="fas fa-check"></i>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="field">
+                        <p class="control has-icons-left">
+                            <input name="password" class="input" type="password" placeholder="Password" required>
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="field">
+                        <p class="control">
+                            <button class="button is-success" disabled>
+                                Register
+                            </button>
+                        </p>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -56,3 +58,4 @@
 </body>
 
 </html>
+
