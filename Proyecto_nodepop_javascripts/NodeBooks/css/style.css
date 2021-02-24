@@ -1,7 +1,7 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css";
 
 /* loader */
-.lds-ellipsis {
+.lds-ellipsis, .global-errors {
   display: block;
   position: fixed;
   z-index: 1;
@@ -12,7 +12,7 @@
 
 }
 
-.lds-ellipsis.hidden {
+.lds-ellipsis.hidden, .global-errors.hidden {
   display: none;
 }
 
@@ -79,6 +79,11 @@
   margin: 40px auto;
   text-align: center;
    
+}
+
+/* Global-errors */
+.global-errors {
+  padding: 20px 10px;
 }
 
 
