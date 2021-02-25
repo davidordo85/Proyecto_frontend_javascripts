@@ -70,18 +70,13 @@
 
 /* cards */
 
-.container {
+.container, .card {
   width: 30%;
   height: 50%;
-}
-
-.card {
   margin: 40px auto;
-   
 }
 
 /* text-cards */
-
 .title {
   text-align: center;
 }

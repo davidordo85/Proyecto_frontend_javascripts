@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NodeBooks-newAds</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+
+    <div class="global-errors hidden"></div>
+
+    <div class="container">
+        <div class="columns">
+            <div class="column is-two-thirds">
+                <h1 class="title">New advertisement</h1>
+                <form>
+                    <input name="Name-book" class="input" placeholder="Name your book..." required>
+                    <input name="Name-author-book" class="input" placeholder="Name author your book..." required>
+                    <select name="saleOrPurchase">
+                        <option value="0">Choose an option</option>
+                        <option value="1">Sale</option>
+                        <option value="2">Purchase</option>
+                    </select>
+                    <input type="file" name="file" accept="image/*">
+                    
+                    <button class="button is-primary is-pulled-right" disabled>Publish</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
