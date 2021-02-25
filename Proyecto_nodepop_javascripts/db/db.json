@@ -1,1 +1,147 @@
-{"advertisements":[{"name":"EL CAZADOR DE SUEÑOS","author":"Stephen King","price":"30.00 €","sale":"true"},{"name":"EL PAISAJE DE LOS SUEÑOS DE ORO","author":"Belinda Alexandra","price":"15.00 €","sale":"false"},{"name":"LA REINA DEL SUR","author":"Arturo Perez Reverte","price":"20.00 €","sale":"true"},{"name":"CIEN AÑOS DE SOLEDAD","author":"Gabriel Garcia Marquez","price":"18.00 €","sale":"false"},{"name":"LA CASA TORCIDA","author":"Agatha Christie","price":"19.00 €","sale":"true"},{"name":"EL ALQUIMISTA","author":"Paulo Coelho","price":"23.00 €","sale":"false"},{"name":"EL ARPA DE HIERBA","author":"Truman Capote","price":"25.00 €","sale":"true"},{"name":"LA MOSCA","author":"George Langelaan","price":"29.00 €","sale":"false"},{"name":"AÑORANZAS Y PESARES","author":"Tad Williams","price":"40.00 €","sale":"true"},{"name":"EL HOBBIT","author":"J. R. R. Tolkien","price":"17.00 €","sale":"false"},{"name":"NEMESIS","author":"Agatha Christie","price":"12.00 €","sale":"true"},{"name":"ASESINATO EN EL ORIENT EXPRESS","author":"Agatha Christie","price":"20.00 €","sale":"false"}],"users":[]}
+{
+  "advertisements": [
+    {
+      "name": "EL CAZADOR DE SUEÑOS",
+      "author": "Stephen King",
+      "price": "30.00 €",
+      "sale": "true",
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "name": "EL PAISAJE DE LOS SUEÑOS DE ORO",
+      "author": "Belinda Alexandra",
+      "price": "15.00 €",
+      "sale": "false",
+      "userId": 2,
+      "id": 2
+    },
+    {
+      "name": "LA REINA DEL SUR",
+      "author": "Arturo Perez Reverte",
+      "price": "20.00 €",
+      "sale": "true",
+      "userId": 3,
+      "id": 3
+    },
+    {
+      "name": "CIEN AÑOS DE SOLEDAD",
+      "author": "Gabriel Garcia Marquez",
+      "price": "18.00 €",
+      "sale": "false",
+      "userId": 3,
+      "id": 4
+    },
+    {
+      "name": "LA CASA TORCIDA",
+      "author": "Agatha Christie",
+      "price": "19.00 €",
+      "sale": "true",
+      "userId": 5,
+      "id": 5
+    },
+    {
+      "name": "EL ALQUIMISTA",
+      "author": "Paulo Coelho",
+      "price": "23.00 €",
+      "sale": "false",
+      "userId": 3,
+      "id": 6
+    },
+    {
+      "name": "EL ARPA DE HIERBA",
+      "author": "Truman Capote",
+      "price": "25.00 €",
+      "sale": "true",
+      "userId": 7,
+      "id": 7
+    },
+    {
+      "name": "LA MOSCA",
+      "author": "George Langelaan",
+      "price": "29.00 €",
+      "sale": "false",
+      "userId": 8,
+      "id": 8
+    },
+    {
+      "name": "AÑORANZAS Y PESARES",
+      "author": "Tad Williams",
+      "price": "40.00 €",
+      "sale": "true",
+      "userId": 9,
+      "id": 9
+    },
+    {
+      "name": "EL HOBBIT",
+      "author": "J. R. R. Tolkien",
+      "price": "17.00 €",
+      "sale": "false",
+      "userId": 4,
+      "id": 10
+    },
+    {
+      "name": "NEMESIS",
+      "author": "Agatha Christie",
+      "price": "12.00 €",
+      "sale": "true",
+      "userId": 5,
+      "id": 11
+    },
+    {
+      "name": "ASESINATO EN EL ORIENT EXPRESS",
+      "author": "Agatha Christie",
+      "price": "20.00 €",
+      "sale": "false",
+      "userId": 5,
+      "id": 12
+    }
+  ],
+  "users": [
+    {
+      "username": "Libros@hola.com",
+      "password": "$2b$10$hrK16VW7LiX/E9oimNFHwuTVHSsQCTdVXs9i9Ps.kK5fVVhjYjvVu",
+      "id": 1
+    },
+    {
+      "username": "Librismo@hola.com",
+      "password": "$2b$10$hrK16VW7LiX/E9oimNFHwuTVHSsQCTdVXs9i9Ps.kK5fVVhjYjvVu",
+      "id": 2
+    },
+    {
+      "username": "Odiolibros@hola.com",
+      "password": "$2b$10$hrK16VW7LiX/E9oimNFHwuTVHSsQCTdVXs9i9Ps.kK5fVVhjYjvVu",
+      "id": 3
+    },
+    {
+      "username": "Gustalibros@hola.com",
+      "password": "$2b$10$hrK16VW7LiX/E9oimNFHwuTVHSsQCTdVXs9i9Ps.kK5fVVhjYjvVu",
+      "id": 4
+    },
+    {
+      "username": "Indiferencialibros@hola.com",
+      "password": "$2b$10$hrK16VW7LiX/E9oimNFHwuTVHSsQCTdVXs9i9Ps.kK5fVVhjYjvVu",
+      "id": 5
+    },
+    {
+      "username": "Amorlibros@hola.com",
+      "password": "$2b$10$hrK16VW7LiX/E9oimNFHwuTVHSsQCTdVXs9i9Ps.kK5fVVhjYjvVu",
+      "id": 6
+    },
+    {
+      "username": "Tiesolibros@hola.com",
+      "password": "$2b$10$hrK16VW7LiX/E9oimNFHwuTVHSsQCTdVXs9i9Ps.kK5fVVhjYjvVu",
+      "id": 7
+    },
+    {
+      "username": "Sinlibros@hola.com",
+      "password": "$2b$10$hrK16VW7LiX/E9oimNFHwuTVHSsQCTdVXs9i9Ps.kK5fVVhjYjvVu",
+      "id": 8
+    },
+    {
+      "username": "Conlibros@hola.com",
+      "password": "$2b$10$hrK16VW7LiX/E9oimNFHwuTVHSsQCTdVXs9i9Ps.kK5fVVhjYjvVu",
+      "id": 9
+    }
+  ]
+}

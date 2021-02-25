@@ -4,11 +4,19 @@ const TOKEN_KEY = 'token';
 export default {
 
     getAdvertisements: async function() {
-        const url = `${BASE_URL}/api/advertisements`;
+        const url = `${BASE_URL}/api/advertisements?_expand=user`;
         const response = await fetch(url);
         if (response.ok) {
-            const data = response.json();
-            return data; // <--- esto realmente es un resolve(data)
+            const data = await response.json();
+            return data.map(advertisement => {
+                return {
+                    name: advertisement.name,
+                    author: advertisement.author,
+                    price: advertisement.price,
+                    sale: advertisement.sale,
+                    adsAuthor: advertisement.user.username
+                }
+            }); 
         } else {
             throw new Error(`HTTP Error: ${response.status}`)
         }
@@ -47,6 +55,11 @@ export default {
 
     getToken: async function() {
         return localStorage.getItem(TOKEN_KEY);
+    },
+
+    isUserLogged: async function() {
+        const token = await this.getToken();
+        return token !== null;
     }
 
 

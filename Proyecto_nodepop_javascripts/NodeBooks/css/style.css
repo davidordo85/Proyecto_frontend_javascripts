@@ -77,13 +77,25 @@
 
 .card {
   margin: 40px auto;
-  text-align: center;
    
+}
+
+/* text-cards */
+
+.title {
+  text-align: center;
 }
 
 /* Global-errors */
 .global-errors {
   padding: 20px 10px;
+}
+
+/* new ads or login */
+.new-advertisement {
+  position:fixed;
+  right: 20px;
+  bottom: 20px;
 }
 
 
