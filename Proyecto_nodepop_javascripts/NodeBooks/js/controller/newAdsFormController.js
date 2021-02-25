@@ -7,6 +7,7 @@ export default class NewAdsFormController extends BaseController {
         super(element);
         this.checkIfUserIsLogged();
         this.attachEventListeners();
+        this.focusNameBook();
     }
 
     // TODO: interesante meter en base controller
@@ -19,7 +20,12 @@ export default class NewAdsFormController extends BaseController {
         }
     }
 
-    attachEventListeners() {
+    focusNameBook() {
+        const nameBook = this.element.querySelector('input')
+        nameBook.focus();
+    }
 
+    attachEventListeners() {
+        // a medida que el usuario escribe, comprobamos si el formulario es válido para habilitar o no el botón de enviar
     }
 }

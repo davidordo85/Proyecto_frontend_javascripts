@@ -17,10 +17,11 @@
             <div class="column is-two-thirds">
                 <h1 class="title">New advertisement</h1>
                 <form>
-                    <input name="Name-book" class="input" placeholder="Name your book..." required>
-                    <input name="Name-author-book" class="input" placeholder="Name author your book..." required>
-                    <select name="saleOrPurchase">
-                        <option value="0">Choose an option</option>
+                    <input name="Name-book" class="input" placeholder="Name your book" required>
+                    <input name="Name-author-book" class="input" placeholder="Name author your book" required>
+                    <input class="input" type="number" min="1" max="50" placeholder="Insert price min 1€, max 50€" required>
+                    <select name="saleOrPurchase" required>
+                        <option value="0">Choose your option</option>
                         <option value="1">Sale</option>
                         <option value="2">Purchase</option>
                     </select>
