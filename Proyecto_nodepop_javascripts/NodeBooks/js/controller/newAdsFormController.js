@@ -14,7 +14,7 @@ export default class NewAdsFormController extends BaseController {
     async checkIfUserIsLogged() {
         const userIsLogged = await dataService.isUserLogged();
         if (!userIsLogged) {
-            window.location.href = '/login.html';
+            window.location.href = '/login.html?next=/new-ads.html';
         } else {
             this.publish(this.events.FINISH_LOADING);
         }
