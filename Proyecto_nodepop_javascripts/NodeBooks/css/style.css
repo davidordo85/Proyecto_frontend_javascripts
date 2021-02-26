@@ -78,6 +78,7 @@
 
 .card {
   margin: 40px auto;
+  box-shadow: 3px 5px 5px 5px #00d1b2;
 }
 
 /* text-cards */
@@ -95,6 +96,15 @@
   position:fixed;
   right: 20px;
   bottom: 20px;
+}
+
+/* headers logo */
+
+.header {
+  text-align: center;
+  background-color: #00d1b2;
+  color:snow;
+  margin: 10px;
 }
 
 
