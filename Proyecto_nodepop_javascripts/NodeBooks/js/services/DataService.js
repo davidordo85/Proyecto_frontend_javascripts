@@ -10,8 +10,8 @@ export default {
             const data = await response.json();
             return data.map(advertisement => {
                 return {
-                    name: advertisement.name,
-                    author: advertisement.author,
+                    name: advertisement.name.replace(/(<([^>]+)>)/gi, ""),
+                    author: advertisement.author.replace(/(<([^>]+)>)/gi, ""),
                     price: advertisement.price,
                     sale: advertisement.sale,
                     adsAuthor: advertisement.user.username

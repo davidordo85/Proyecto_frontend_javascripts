@@ -3,7 +3,7 @@
     {
       "name": "EL CAZADOR DE SUEÑOS",
       "author": "Stephen King",
-      "price": "30.00 €",
+      "price": "30",
       "sale": "true",
       "userId": 1,
       "id": 1
@@ -11,7 +11,7 @@
     {
       "name": "EL PAISAJE DE LOS SUEÑOS DE ORO",
       "author": "Belinda Alexandra",
-      "price": "15.00 €",
+      "price": "15",
       "sale": "false",
       "userId": 2,
       "id": 2
@@ -19,7 +19,7 @@
     {
       "name": "LA REINA DEL SUR",
       "author": "Arturo Perez Reverte",
-      "price": "20.00 €",
+      "price": "20",
       "sale": "true",
       "userId": 3,
       "id": 3
@@ -27,7 +27,7 @@
     {
       "name": "CIEN AÑOS DE SOLEDAD",
       "author": "Gabriel Garcia Marquez",
-      "price": "18.00 €",
+      "price": "18",
       "sale": "false",
       "userId": 3,
       "id": 4
@@ -35,7 +35,7 @@
     {
       "name": "LA CASA TORCIDA",
       "author": "Agatha Christie",
-      "price": "19.00 €",
+      "price": "19",
       "sale": "true",
       "userId": 5,
       "id": 5
@@ -43,7 +43,7 @@
     {
       "name": "EL ALQUIMISTA",
       "author": "Paulo Coelho",
-      "price": "23.00 €",
+      "price": "23",
       "sale": "false",
       "userId": 3,
       "id": 6
@@ -51,7 +51,7 @@
     {
       "name": "EL ARPA DE HIERBA",
       "author": "Truman Capote",
-      "price": "25.00 €",
+      "price": "25",
       "sale": "true",
       "userId": 7,
       "id": 7
@@ -59,7 +59,7 @@
     {
       "name": "LA MOSCA",
       "author": "George Langelaan",
-      "price": "29.00 €",
+      "price": "29",
       "sale": "false",
       "userId": 8,
       "id": 8
@@ -67,7 +67,7 @@
     {
       "name": "AÑORANZAS Y PESARES",
       "author": "Tad Williams",
-      "price": "40.00 €",
+      "price": "40",
       "sale": "true",
       "userId": 9,
       "id": 9
@@ -75,7 +75,7 @@
     {
       "name": "EL HOBBIT",
       "author": "J. R. R. Tolkien",
-      "price": "17.00 €",
+      "price": "17",
       "sale": "false",
       "userId": 4,
       "id": 10
@@ -83,7 +83,7 @@
     {
       "name": "NEMESIS",
       "author": "Agatha Christie",
-      "price": "12.00 €",
+      "price": "12",
       "sale": "true",
       "userId": 5,
       "id": 11
@@ -91,7 +91,7 @@
     {
       "name": "ASESINATO EN EL ORIENT EXPRESS",
       "author": "Agatha Christie",
-      "price": "20.00 €",
+      "price": "20",
       "sale": "false",
       "userId": 5,
       "id": 12
