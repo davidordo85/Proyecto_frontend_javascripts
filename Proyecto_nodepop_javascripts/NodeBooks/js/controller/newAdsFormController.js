@@ -43,15 +43,19 @@ export default class NewAdsFormController extends BaseController {
 
         this.element.addEventListener('submit', async event => {
             event.preventDefault();
-            const ads = {
+            const advertisement = {
                 name: this.element.elements.nameBook.value,
                 author: this.element.elements.nameAuthorBook.value,
                 price: this.element.elements.priceBook.value,
                 sale: this.element.elements.saleOrPurchase.value,
+                image: null
+            }
+            if (this.element.elements.file.files.length > 0) {
+                advertisement.image = this.element.elements.file.files[0]
             }
             this.publish(this.events.START_LOADING);
             try {
-                await dataService.saveAds(ads);
+                await dataService.saveAds(advertisement);
                 window.location.href = '/?advertisement=adsOK'
             } catch (error) {
                 this.publish(this.events.ERROR, error);

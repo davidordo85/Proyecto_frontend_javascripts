@@ -9,12 +9,14 @@ export default {
         if (response.ok) {
             const data = await response.json();
             return data.map(advertisement => {
+                const user = advertisement.user || {};
                 return {
                     name: advertisement.name.replace(/(<([^>]+)>)/gi, ""),
                     author: advertisement.author.replace(/(<([^>]+)>)/gi, ""),
                     price: advertisement.price,
                     sale: advertisement.sale,
-                    adsAuthor: advertisement.user.username
+                    image: advertisement.image || null,
+                    adsAuthor: user.username || 'Desconocido'
                 }
             }); 
         } else {
@@ -22,12 +24,18 @@ export default {
         }
     },
 
-    advertisement: async function(url, advertisementData) {
+    advertisement: async function(url, advertisementData, json=true) {
         const config = {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(advertisementData)
+            headers: {},
+            body: null
         };
+        if (json) {
+            config.headers['Content-Type'] = 'application/json';
+            config.body = JSON.stringify(advertisementData);
+        } else {
+            config.body = advertisementData;
+        }
         const token = await this.getToken();
         if (token) {
             config.headers['Authorization'] = `Bearer ${token}`;
@@ -69,7 +77,20 @@ export default {
 
     saveAds: async function(ads) {
         const url = `${BASE_URL}/api/advertisements`;
+        if (ads.image) {
+            const imageURL = await this.uploadImage(ads.image);
+            ads.image = imageURL;
+        }
         return await this.advertisement(url, ads);
+    },
+
+    uploadImage: async function(image) {
+        const form = new FormData();
+        form.append('file', image);
+
+        const url = `${BASE_URL}/upload`;
+        const response = await this.advertisement(url, form, false);
+        return response.path || null;
     }
 
 };
