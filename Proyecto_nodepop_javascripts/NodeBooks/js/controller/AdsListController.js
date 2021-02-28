@@ -6,16 +6,17 @@ export default class AdsListController extends BaseController {
 
     render(advertisements) {
         for (const advertisement of advertisements) {
-            const aHref = document.createElement('a');
-            aHref.setAttribute('href', './ad-detail.html')
-            aHref.setAttribute('class', 'card-element')
-            aHref.innerHtml = adsView(advertisement)
-            this.element.appendChild(aHref)
             
            
             const article = document.createElement('article');
-            article.innerHTML = adsView(advertisement);
-            aHref.appendChild(article);
+            article.classList.add('advertisement');
+            const advertisementHTML = adsView(advertisement);
+            article.innerHTML = advertisementHTML;
+
+            article.addEventListener('click', (event) => {
+                window.location.href = 'ad-detail.html?id=' + advertisement.id;
+            })
+            this.element.appendChild(article);
         }
     }
 

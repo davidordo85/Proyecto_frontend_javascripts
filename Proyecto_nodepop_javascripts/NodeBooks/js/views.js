@@ -23,6 +23,7 @@ export const adsView = (advertisement) => {
     <div class="content">
       <p class="price">${advertisement.price} €</p>
       <p class="sale">${advertisement.sale}</p>
+      <p class="id">${advertisement.id}</p>
     </div>
     </div>
     <br>

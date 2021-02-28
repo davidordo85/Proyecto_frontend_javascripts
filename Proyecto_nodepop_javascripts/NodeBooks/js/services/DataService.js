@@ -16,7 +16,8 @@ export default {
                     price: advertisement.price,
                     sale: advertisement.sale,
                     image: advertisement.image || null,
-                    adsAuthor: user.username || 'Desconocido'
+                    adsAuthor: user.username || 'Desconocido',
+                    id: advertisement.id
                 }
             }); 
         } else {

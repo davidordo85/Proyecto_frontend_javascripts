@@ -13,11 +13,10 @@ export default class AdsDetailViewController extends BaseController {
 
     async loadAdDetail() {
         this.publish(this.events.START_LOADING, {});
-        try {
-            
+        try {            
             const detailAdvertisement = await dataService.getAdvertisements();
             this.renderDetail(detailAdvertisement[0]);
-            console.log(detailAdvertisement[0])
+            console.log(detailAdvertisement)
         } catch (error) {
             console.error(error);
             this.publish(this.events.ERROR, error);
