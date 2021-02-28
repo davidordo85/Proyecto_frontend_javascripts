@@ -2,7 +2,7 @@
 
 import ErrorController from './controller/ErrorController.js';
 import LoaderController from './controller/LoaderController.js';
-import AdsDetailController from './controller/AdsDetailController.js';
+import AdsDetailViewController from './controller/AdsDetailViewController.js';
 import NewAdsOrLoginController from './controller/NewAdsOrLoginController.js';
 
 window.addEventListener("DOMContentLoaded", async (event) => {
@@ -10,7 +10,7 @@ window.addEventListener("DOMContentLoaded", async (event) => {
     new LoaderController(loader);
 
     const detail = document.querySelector(".advertisement");
-    const detailAds = new AdsDetailController(detail);
+    const detailAds = new AdsDetailViewController(detail);
     detailAds.loadAdDetail();
 
     const errorsElement = document.querySelector('.global-errors');

@@ -8,6 +8,7 @@ export default class AdsListController extends BaseController {
         for (const advertisement of advertisements) {
             const aHref = document.createElement('a');
             aHref.setAttribute('href', './ad-detail.html')
+            aHref.setAttribute('class', 'card-element')
             aHref.innerHtml = adsView(advertisement)
             this.element.appendChild(aHref)
             

@@ -2,7 +2,7 @@ import BaseController from './BaseController.js';
 import dataService from '../services/DataService.js';
 import { adsView } from "../views.js";
 
-export default class AdsDetailController extends BaseController {
+export default class AdsDetailViewController extends BaseController {
 
     renderDetail(advertisement) {
         const article = document.createElement('article');
