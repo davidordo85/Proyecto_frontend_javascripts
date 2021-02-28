@@ -24,6 +24,8 @@ export default {
         }
     },
 
+
+
     advertisement: async function(url, advertisementData, json=true) {
         const config = {
             method: 'POST',

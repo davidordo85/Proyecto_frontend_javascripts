@@ -1,12 +1,12 @@
 import BaseController from './BaseController.js';
 import dataService from '../services/DataService.js';
-import { detailView } from "../views.js";
+import { adsView } from "../views.js";
 
 export default class AdsDetailController extends BaseController {
 
     renderDetail(advertisement) {
         const article = document.createElement('article');
-        article.innerHTML = detailView(advertisement);
+        article.innerHTML = adsView(advertisement);
         this.element.appendChild(article);
 
     }
@@ -14,8 +14,10 @@ export default class AdsDetailController extends BaseController {
     async loadAdDetail() {
         this.publish(this.events.START_LOADING, {});
         try {
-            const detailAdvertisements = await dataService.getAdvertisements();
-            this.renderDetail(detailAdvertisements);
+            
+            const detailAdvertisement = await dataService.getAdvertisements();
+            this.renderDetail(detailAdvertisement[0]);
+            console.log(detailAdvertisement[0])
         } catch (error) {
             console.error(error);
             this.publish(this.events.ERROR, error);
