@@ -6,7 +6,6 @@ export default class AdsListController extends BaseController {
 
     render(advertisements) {
         for (const advertisement of advertisements) {
-            
            
             const article = document.createElement('article');
             article.classList.add('advertisement');
@@ -14,7 +13,7 @@ export default class AdsListController extends BaseController {
             article.innerHTML = advertisementHTML;
 
             article.addEventListener('click', (event) => {
-                window.location.href = 'ad-detail.html?id=' + advertisement.id;
+                window.location.href = 'ad-detail.html?' + advertisement.id;
             })
             this.element.appendChild(article);
         }

@@ -15,8 +15,14 @@ export default class AdsDetailViewController extends BaseController {
         this.publish(this.events.START_LOADING, {});
         try {            
             const detailAdvertisement = await dataService.getAdvertisements();
-            this.renderDetail(detailAdvertisement[0]);
-            console.log(detailAdvertisement)
+            const idAds = window.location.search.replace('?', '');
+
+            
+            this.renderDetail(detailAdvertisement)
+            
+            console.log(detailAdvertisement);
+            console.log(idAds);
+
         } catch (error) {
             console.error(error);
             this.publish(this.events.ERROR, error);
