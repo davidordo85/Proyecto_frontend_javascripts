@@ -91,6 +91,7 @@ export default {
         const url = `${BASE_URL}/upload`;
         const response = await this.advertisement(url, form, false);
         return response.path || null;
-    }
+    },
+
 
 };

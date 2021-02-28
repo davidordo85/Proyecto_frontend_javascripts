@@ -6,8 +6,6 @@ export default class AdsListController extends BaseController {
 
     render(advertisements) {
         for (const advertisement of advertisements) {
-            
-            
             const aHref = document.createElement('a');
             aHref.setAttribute('href', './ad-detail.html')
             aHref.innerHtml = adsView(advertisement)
@@ -23,8 +21,8 @@ export default class AdsListController extends BaseController {
     async loadAds() {
         this.publish(this.events.START_LOADING, {});
         try {
-            const advertisements = await dataService.getAdvertisements();
-            this.render(advertisements);
+            const advertisement = await dataService.getAdvertisements();
+            this.render(advertisement);
         } catch (error) {
             console.error(error);
             this.publish(this.events.ERROR, error);
